@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-01T23:54:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">適当ブログ</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">RubyやGemをLinuxにインストールする</title><link href="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html" rel="alternate" type="text/html" title="RubyやGemをLinuxにインストールする" /><published>2020-11-01T21:42:24+09:00</published><updated>2020-11-01T21:42:24+09:00</updated><id>http://localhost:4000/linux/2020/11/01/linux-to-install-ruby</id><content type="html" xml:base="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html">&lt;h1 id=&quot;rubyやgemをインストールする&quot;&gt;RubyやGemをインストールする&lt;/h1&gt;
+
+&lt;p&gt;自分のやったことのメモをmdでよく残しているので、&lt;del&gt;後悔&lt;/del&gt;公開しようかと思い&lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt;を選択したがRubyなど一式色々必要だったためインストールしたときのメモ&lt;/p&gt;
+
+&lt;p&gt;ディストリビューションはArchLinuxを使用しており何かとズレがあるかと思うのでこの記事通りやる場合適宜読み替えをしてください&lt;/p&gt;
+
+&lt;h2 id=&quot;rbenvのインストール&quot;&gt;rbenvのインストール&lt;/h2&gt;
+
+&lt;p&gt;rbenvのgithubは&lt;a href=&quot;https://github.com/rbenv/rbenv&quot;&gt;ここ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記の記事の&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Basic GitHub Checkout&lt;/code&gt;を参考に実行しています&lt;/p&gt;
+
+&lt;h3 id=&quot;githubからクローン&quot;&gt;GitHubからクローン&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;フォルダに移動してコンパイル&quot;&gt;フォルダに移動してコンパイル&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.rbenv &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; src/configure &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; src
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;パスを通す&quot;&gt;パスを通す&lt;/h3&gt;
+
+&lt;p&gt;.bashrcに書き込みました&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash=.bashrc&quot;&gt;echo '# Ruby'
+echo 'export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.bashrc
+echo 'eval &quot;(rbenv init)&quot;'
+exec bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;rbenvを実行してみる&quot;&gt;rbenvを実行してみる&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+rbenv 1.1.2-36-g60c9339
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ruby-buildをインストール&quot;&gt;ruby-buildをインストール&lt;/h2&gt;
+
+&lt;p&gt;rbenvでrubyをインストールする際に必要らしいので&lt;a href=&quot;https://aur.archlinux.org/packages/ruby-build/&quot;&gt;AUR&lt;/a&gt;で見つけたものをインストール&lt;/p&gt;
+
+&lt;h3 id=&quot;クローン&quot;&gt;クローン&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://aur.archlinux.org/ruby-build.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;インストール&quot;&gt;インストール&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;makepkg &lt;span class=&quot;nt&quot;&gt;-si&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ruby-buildを実行してみる&quot;&gt;ruby-buildを実行してみる&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby-build &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+ruby-build 20201005
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;rbenvでインストール&quot;&gt;rbenvでインストール&lt;/h2&gt;
+
+&lt;h3 id=&quot;安定版を探す&quot;&gt;安定版を探す&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt;
+2.5.8
+2.6.6
+2.7.2
+jruby-9.2.13.0
+maglev-1.0.0
+mruby-2.1.2
+rbx-5.0
+truffleruby-20.2.0
+truffleruby+graalvm-20.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;インストール-1&quot;&gt;インストール&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Downloading ruby-2.6.6.tar.bz2...
+-&amp;gt; https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.6.tar.bz2
+Installing ruby-2.6.6...
+Installed ruby-2.6.6 to /home/smr/.rbenv/versions/2.6.6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;バージョンの固定&quot;&gt;バージョンの固定&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv global 2.6.6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;rubyの実行&quot;&gt;rubyの実行&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+ruby 2.6.6p146 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2020-03-31 revision 67876&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;x86_64-linux]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;bundlerをインストール&quot;&gt;Bundlerをインストール&lt;/h2&gt;
+
+&lt;h3 id=&quot;gemを使ってbundlerをインストール&quot;&gt;gemを使ってbundlerをインストール&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bundlerの実行&quot;&gt;bundlerの実行&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundler &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+Bundler version 2.1.4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">RubyやGemをインストールする</summary></entry><entry><title type="html">ノートパソコンについている音量キーをLinuxで扱う</title><link href="http://localhost:4000/linux/thinkpad/2020/11/01/thinkpad-media-key.html" rel="alternate" type="text/html" title="ノートパソコンについている音量キーをLinuxで扱う" /><published>2020-11-01T21:42:24+09:00</published><updated>2020-11-01T21:42:24+09:00</updated><id>http://localhost:4000/linux/thinkpad/2020/11/01/thinkpad-media-key</id><content type="html" xml:base="http://localhost:4000/linux/thinkpad/2020/11/01/thinkpad-media-key.html">&lt;p&gt;最近一昔前のThinkPadを引っ張りだしArchLinux+WayLand+Swayという環境でインターネッツをしているが音量キーがあるにもかかわらず押しても反応しないため設定をしてみる&lt;/p&gt;
+
+&lt;p&gt;この情報は2020年11月の情報です&lt;/p&gt;
+
+&lt;h2 id=&quot;環境&quot;&gt;環境&lt;/h2&gt;
+&lt;p&gt;一応上にも書いたが今回作業を行った環境を書いておく&lt;/p&gt;
+
+&lt;p&gt;PC
+Lenovo ThinkPad X1 (2013)&lt;/p&gt;
+
+&lt;p&gt;ディストリビューション
+ArchLinux&lt;/p&gt;
+
+&lt;p&gt;ウィンドウ環境
+WayLand+GDM+Sway&lt;/p&gt;
+
+&lt;h2 id=&quot;大体のやること&quot;&gt;大体のやること&lt;/h2&gt;
+
+&lt;p&gt;キーコードを取得しSwayのキーバインドに登録する&lt;/p&gt;
+
+&lt;h2 id=&quot;キーコードをスキャンしてみる&quot;&gt;キーコードをスキャンしてみる&lt;/h2&gt;
+
+&lt;p&gt;Waylandでキーコードを調べる場合&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wshowkeys&lt;/code&gt;というパッケージをインストールする必要がある&lt;/p&gt;
+
+&lt;p&gt;https://git.sr.ht/~sircmpwn/wshowkeys&lt;/p&gt;
+
+&lt;p&gt;ビルドなどに必要なものをインストール&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pacman -S meson cairo pango udev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;クローン&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://git.sr.ht/~sircmpwn/wshowkeys
+cd wshowkeys/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;インストール&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;meson build
+ninja -C build
+ninja -C build install
+ninja -C build install
+chmod a+s /usr/local/bin/wshowkeys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;swayのコンフィグに書き込む&quot;&gt;Swayのコンフィグに書き込む&lt;/h2&gt;
+
+&lt;p&gt;音量の変更コマンドで&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amixer&lt;/code&gt;というコマンドを使用する&lt;/p&gt;
+
+&lt;p&gt;音量を上げる場合(下げる場合は+ではなく-)
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amixer -q -D pulse sset Master 10%+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;音量をミュートする(ミュートを解除する場合はunmute)
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amixer -q -D pulse sset Master mute&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Thinkpad" /><summary type="html">最近一昔前のThinkPadを引っ張りだしArchLinux+WayLand+Swayという環境でインターネッツをしているが音量キーがあるにもかかわらず押しても反応しないため設定をしてみる</summary></entry></feed>

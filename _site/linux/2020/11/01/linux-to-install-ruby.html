@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>RubyやGemをLinuxにインストールする</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>RubyやGemをLinuxにインストールする | 適当ブログ</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="RubyやGemをLinuxにインストールする" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="RubyやGemをインストールする" />
+<meta property="og:description" content="RubyやGemをインストールする" />
+<link rel="canonical" href="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html" />
+<meta property="og:url" content="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html" />
+<meta property="og:site_name" content="適当ブログ" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-01T21:42:24+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html"},"headline":"RubyやGemをLinuxにインストールする","dateModified":"2020-11-01T21:42:24+09:00","datePublished":"2020-11-01T21:42:24+09:00","description":"RubyやGemをインストールする","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header ">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/smr.png" alt="s4m0r1" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">s4m0r1</a>
+      </h2>
+      </div><p class="tagline">infra</p></div>
+      
+      <ul class="social about-footer "><a href="https://github.com/s4m0r1" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://twitter.com/s4m0r1" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2020</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/linux/2020/11/01/linux-to-install-ruby.html">
+    <h2 class="post-title">RubyやGemをLinuxにインストールする</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>2020 Nov 1</div><ul class="post-categories"><li>Linux</li></ul></div>
+  <div class="post">
+    <h1 id="rubyやgemをインストールする">RubyやGemをインストールする</h1>
+
+<p>自分のやったことのメモをmdでよく残しているので、<del>後悔</del>公開しようかと思い<a href="https://github.com/jekyll/jekyll">Jekyll</a>を選択したがRubyなど一式色々必要だったためインストールしたときのメモ</p>
+
+<p>ディストリビューションはArchLinuxを使用しており何かとズレがあるかと思うのでこの記事通りやる場合適宜読み替えをしてください</p>
+
+<h2 id="rbenvのインストール">rbenvのインストール</h2>
+
+<p>rbenvのgithubは<a href="https://github.com/rbenv/rbenv">ここ</a></p>
+
+<p>上記の記事の<code class="language-plaintext highlighter-rouge">Basic GitHub Checkout</code>を参考に実行しています</p>
+
+<h3 id="githubからクローン">GitHubからクローン</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+</code></pre></div></div>
+
+<h3 id="フォルダに移動してコンパイル">フォルダに移動してコンパイル</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/.rbenv <span class="o">&amp;&amp;</span> src/configure <span class="o">&amp;&amp;</span> make <span class="nt">-C</span> src
+</code></pre></div></div>
+
+<h3 id="パスを通す">パスを通す</h3>
+
+<p>.bashrcに書き込みました</p>
+
+<pre><code class="language-bash=.bashrc">echo '# Ruby'
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc
+echo 'eval "(rbenv init)"'
+exec bash
+</code></pre>
+
+<h3 id="rbenvを実行してみる">rbenvを実行してみる</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nt">-v</span>
+rbenv 1.1.2-36-g60c9339
+</code></pre></div></div>
+
+<h2 id="ruby-buildをインストール">ruby-buildをインストール</h2>
+
+<p>rbenvでrubyをインストールする際に必要らしいので<a href="https://aur.archlinux.org/packages/ruby-build/">AUR</a>で見つけたものをインストール</p>
+
+<h3 id="クローン">クローン</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://aur.archlinux.org/ruby-build.git
+</code></pre></div></div>
+
+<h3 id="インストール">インストール</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>makepkg <span class="nt">-si</span>
+</code></pre></div></div>
+
+<h3 id="ruby-buildを実行してみる">ruby-buildを実行してみる</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby-build <span class="nt">--version</span>
+ruby-build 20201005
+</code></pre></div></div>
+<h2 id="rbenvでインストール">rbenvでインストール</h2>
+
+<h3 id="安定版を探す">安定版を探す</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">install</span> <span class="nt">--list</span>
+2.5.8
+2.6.6
+2.7.2
+jruby-9.2.13.0
+maglev-1.0.0
+mruby-2.1.2
+rbx-5.0
+truffleruby-20.2.0
+truffleruby+graalvm-20.2.0
+</code></pre></div></div>
+
+<h3 id="インストール-1">インストール</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloading ruby-2.6.6.tar.bz2...
+-&gt; https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.6.tar.bz2
+Installing ruby-2.6.6...
+Installed ruby-2.6.6 to /home/smr/.rbenv/versions/2.6.6
+</code></pre></div></div>
+
+<h3 id="バージョンの固定">バージョンの固定</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv global 2.6.6
+</code></pre></div></div>
+
+<h3 id="rubyの実行">rubyの実行</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+ruby 2.6.6p146 <span class="o">(</span>2020-03-31 revision 67876<span class="o">)</span> <span class="o">[</span>x86_64-linux]
+</code></pre></div></div>
+
+<h2 id="bundlerをインストール">Bundlerをインストール</h2>
+
+<h3 id="gemを使ってbundlerをインストール">gemを使ってbundlerをインストール</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">exec </span>gem <span class="nb">install </span>bundler
+</code></pre></div></div>
+
+<h3 id="bundlerの実行">bundlerの実行</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundler <span class="nt">-v</span>
+Bundler version 2.1.4
+</code></pre></div></div>
+
+
+  </div></div>
+
+    </section>
+    <footer class="">
+      <ul class="social about-footer "><a href="https://github.com/s4m0r1" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://twitter.com/s4m0r1" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a></ul><p class="about-footer ">&copy;
+        2020</p><div class="about-footer ">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>
