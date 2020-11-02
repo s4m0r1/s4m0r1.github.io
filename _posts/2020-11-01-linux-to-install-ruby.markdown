@@ -33,7 +33,7 @@ cd ~/.rbenv && src/configure && make -C src
 
 .bashrcに書き込みました
 
-```bash=.bashrc
+```bash
 echo '# Ruby'
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "(rbenv init)"'
@@ -117,3 +117,4 @@ bundler -v
 Bundler version 2.1.4
 ```
 
+実はこのあと2.7が必要ということでインストールしたのは内緒
