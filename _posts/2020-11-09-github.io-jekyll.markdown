@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Markdownをgithub.ioでブログっぽく公開してみる"
+date:   2020-11-01 21:42:24 +0900
+categories: Linux,Jekyll,Ruby
+---
+
+## 目次
+
+1. MarkDownでブログっぽくなるJekyll
+
+1. Jekyllを使う理由
+
+1. githubでJekyllを使用する際の仕様
+
+1. Rubyなどの導入
+
+1. Jekyllの準備
+
+1. githubで公開
+
+## MarkDownでブログっぽくなるJekyll
+
+Jekyllは～～～～～～（ここにJekyllの説明）
+
+## Jekyllを使う理由
+
+- デザインがいっぱい選べる
+- いちいちページわけをする必要がない
+- Nuxt系と違ってジェネレートをしてから投稿する必要がない（ビルドしてくれるから）
+
+
+## githubでJekyllを使用する際の仕様
+
+- バージョンの指定がある
+- すべてのテーマが使えるわけではない
+- などなど
+
+
+## Rubyなどの導入
+
+過去に書いてるからここを参考にしてください！
+
+## Jekyllの準備
+
+gem うんたらのくだり
+
+## githubで公開
+
+公式のやつでハマるとこを説明
