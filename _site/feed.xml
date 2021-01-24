@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-01T23:54:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">適当ブログ</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">RubyやGemをLinuxにインストールする</title><link href="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html" rel="alternate" type="text/html" title="RubyやGemをLinuxにインストールする" /><published>2020-11-01T21:42:24+09:00</published><updated>2020-11-01T21:42:24+09:00</updated><id>http://localhost:4000/linux/2020/11/01/linux-to-install-ruby</id><content type="html" xml:base="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby.html">&lt;h1 id=&quot;rubyやgemをインストールする&quot;&gt;RubyやGemをインストールする&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-24T21:19:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">適当ブログ</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">RubyやGemをLinuxにインストールする</title><link href="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby-copy.html" rel="alternate" type="text/html" title="RubyやGemをLinuxにインストールする" /><published>2020-11-01T21:42:24+09:00</published><updated>2020-11-01T21:42:24+09:00</updated><id>http://localhost:4000/linux/2020/11/01/linux-to-install-ruby%20copy</id><content type="html" xml:base="http://localhost:4000/linux/2020/11/01/linux-to-install-ruby-copy.html">&lt;h1 id=&quot;rubyやgemをインストールする&quot;&gt;RubyやGemをインストールする&lt;/h1&gt;
 
 &lt;p&gt;自分のやったことのメモをmdでよく残しているので、&lt;del&gt;後悔&lt;/del&gt;公開しようかと思い&lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt;を選択したがRubyなど一式色々必要だったためインストールしたときのメモ&lt;/p&gt;
 
@@ -24,11 +24,11 @@
 
 &lt;p&gt;.bashrcに書き込みました&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-bash=.bashrc&quot;&gt;echo '# Ruby'
-echo 'export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.bashrc
-echo 'eval &quot;(rbenv init)&quot;'
-exec bash
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'# Ruby'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'eval &quot;(rbenv init)&quot;'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;rbenvを実行してみる&quot;&gt;rbenvを実行してみる&lt;/h3&gt;
 
@@ -95,55 +95,91 @@ ruby 2.6.6p146 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2020-03-31 revision
 &lt;h3 id=&quot;bundlerの実行&quot;&gt;bundlerの実行&lt;/h3&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundler &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
 Bundler version 2.1.4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">RubyやGemをインストールする</summary></entry><entry><title type="html">ノートパソコンについている音量キーをLinuxで扱う</title><link href="http://localhost:4000/linux/thinkpad/2020/11/01/thinkpad-media-key.html" rel="alternate" type="text/html" title="ノートパソコンについている音量キーをLinuxで扱う" /><published>2020-11-01T21:42:24+09:00</published><updated>2020-11-01T21:42:24+09:00</updated><id>http://localhost:4000/linux/thinkpad/2020/11/01/thinkpad-media-key</id><content type="html" xml:base="http://localhost:4000/linux/thinkpad/2020/11/01/thinkpad-media-key.html">&lt;p&gt;最近一昔前のThinkPadを引っ張りだしArchLinux+WayLand+Swayという環境でインターネッツをしているが音量キーがあるにもかかわらず押しても反応しないため設定をしてみる&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;この情報は2020年11月の情報です&lt;/p&gt;
+&lt;p&gt;実はこのあと2.7が必要ということでインストールしたのは内緒&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">RubyやGemをインストールする</summary></entry><entry><title type="html">Linuxでコンソールケーブルを使う</title><link href="http://localhost:4000/linux/2020/11/01/linux-console-cable.html" rel="alternate" type="text/html" title="Linuxでコンソールケーブルを使う" /><published>2020-11-01T21:42:24+09:00</published><updated>2020-11-01T21:42:24+09:00</updated><id>http://localhost:4000/linux/2020/11/01/linux-console-cable</id><content type="html" xml:base="http://localhost:4000/linux/2020/11/01/linux-console-cable.html">&lt;h2 id=&quot;はじめに&quot;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;ここに写真&lt;/p&gt;
+
+&lt;p&gt;ルーターなどのメンテナンスによく使用されるコンソールケーブルですが、Linuxで使用するタイミングが来たので試してみる&lt;/p&gt;
 
 &lt;h2 id=&quot;環境&quot;&gt;環境&lt;/h2&gt;
-&lt;p&gt;一応上にも書いたが今回作業を行った環境を書いておく&lt;/p&gt;
 
-&lt;p&gt;PC
-Lenovo ThinkPad X1 (2013)&lt;/p&gt;
-
-&lt;p&gt;ディストリビューション
-ArchLinux&lt;/p&gt;
-
-&lt;p&gt;ウィンドウ環境
-WayLand+GDM+Sway&lt;/p&gt;
-
-&lt;h2 id=&quot;大体のやること&quot;&gt;大体のやること&lt;/h2&gt;
-
-&lt;p&gt;キーコードを取得しSwayのキーバインドに登録する&lt;/p&gt;
-
-&lt;h2 id=&quot;キーコードをスキャンしてみる&quot;&gt;キーコードをスキャンしてみる&lt;/h2&gt;
-
-&lt;p&gt;Waylandでキーコードを調べる場合&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wshowkeys&lt;/code&gt;というパッケージをインストールする必要がある&lt;/p&gt;
-
-&lt;p&gt;https://git.sr.ht/~sircmpwn/wshowkeys&lt;/p&gt;
-
-&lt;p&gt;ビルドなどに必要なものをインストール&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pacman -S meson cairo pango udev
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cat /etc/lsb-release                                                                                                        2021年01月24日 18時28分22秒
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION=&quot;Ubuntu 20.04.1 LTS&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;クローン&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://git.sr.ht/~sircmpwn/wshowkeys
-cd wshowkeys/
+&lt;h2 id=&quot;screenコマンドを使って接続&quot;&gt;screenコマンドを使って接続&lt;/h2&gt;
+
+&lt;p&gt;よく使われる方式はこれっぽいですね&lt;/p&gt;
+
+&lt;p&gt;使用するケーブルのデバイス名を使用して接続&lt;/p&gt;
+
+&lt;p&gt;だいたい&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ttyUSBX&lt;/code&gt;でしょみたいなのはあんまよくなさそうなので&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dmesg&lt;/code&gt;で最後に接続されたデバイスを見てみましょう&lt;/p&gt;
+
+&lt;p&gt;（ パイプでtailなどに渡すとわざわざ長いのを見せられずに済む）&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[ 8550.813769] usb 1-1.4.2: Product: USB HS Serial Converter
+[ 8550.813771] usb 1-1.4.2: Manufacturer: FTDI
+[ 8550.813773] usb 1-1.4.2: SerialNumber: FTBUIT8I
+[ 8551.466736] usbcore: registered new interface driver usbserial_generic
+[ 8551.466759] usbserial: USB Serial support registered for generic
+[ 8551.526468] usbcore: registered new interface driver ftdi_sio
+[ 8551.526620] usbserial: USB Serial support registered for FTDI USB Serial Device
+[ 8551.526836] ftdi_sio 1-1.4.2:1.0: FTDI USB Serial Device converter detected
+[ 8551.527548] usb 1-1.4.2: Detected FT232BM
+[ 8551.529269] usb 1-1.4.2: FTDI USB Serial Device converter now attached to ttyUSB0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;インストール&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;meson build
-ninja -C build
-ninja -C build install
-ninja -C build install
-chmod a+s /usr/local/bin/wshowkeys
+&lt;p&gt;一番最後の行から&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ttyUSB0&lt;/code&gt;みたいですね実際にscreenに渡して使ってみましょう&lt;/p&gt;
+
+&lt;p&gt;デバイスの権限は&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root&lt;/code&gt;になっていることが多いので&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt;使うか権限を変えておきましょう&lt;/p&gt;
+
+&lt;p&gt;引数にデバイスとポーレートを指定して実行します&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo screen /dev/ttyUSB0 9600
+
+Starting with exec0 and config0 ...
+
+RTX1500 Rev.8.03.90 (Fri Jun 25 10:31:59 2010)
+  Copyright (c) 1994-2010 Yamaha Corporation. All Rights Reserved.
+  Copyright (c) 1991-1997 Regents of the University of California.
+  Copyright (c) 1995-2004 Jean-loup Gailly and Mark Adler.
+  Copyright (c) 1998-2000 Tokyo Institute of Technology.
+  Copyright (c) 2000 Japan Advanced Institute of Science and Technology, HOKURIKU.
+  Copyright (c) 2002 RSA Security Inc. All rights reserved.
+  Copyright (c) 1997-2004 University of Cambridge. All rights reserved.
+  Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura, All rights reserved.
+  Copyright (c) 1995 Tatu Ylonen , Espoo, Finland All rights reserved.
+  Copyright (c) 1998-2004 The OpenSSL Project.  All rights reserved.
+  Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com) All rights reserved.
+00:a0:de:35:9c:7f, 00:a0:de:35:9c:80, 00:a0:de:35:9c:81, 
+Memory 128Mbytes, 3LAN, 2BRI
+
+# show config 
+# RTX1500 Rev.8.03.90 (Fri Jun 25 10:31:59 2010)
+# MAC Address : 00:a0:de:35:9c:7f, 00:a0:de:35:9c:80, 00:a0:de:35:9c:81, 
+# Memory 128Mbytes, 3LAN, 2BRI
+# main:  RTX1500 ver=d0 serial=N0Y011661 MAC-Address=00:a0:de:35:9c:7f MAC-Addr
+ess=00:a0:de:35:9c:80 MAC-Address=00:a0:de:35:9c:81
+# Reporting Date: Jan 1 09:01:40 1980
+login password encrypted *
+administrator password encrypted *
+console character ascii
+ip route default gateway 172.16.0.1
+ip lan1 address 10.17.127.1/24
+ip lan2 address 172.16.0.60/24
+ip lan2 nat descriptor 1
+nat descriptor type 1 masquerade
+nat descriptor address outer 1 172.16.0.60
+nat descriptor address inner 1 10.17.127.1-10.17.127.254
+nat descriptor masquerade static 1 1 10.17.127.4 tcp www
+dhcp service server
+dhcp scope 1 10.17.127.2-10.17.127.50/24
+dns server 1.1.1.1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;swayのコンフィグに書き込む&quot;&gt;Swayのコンフィグに書き込む&lt;/h2&gt;
-
-&lt;p&gt;音量の変更コマンドで&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amixer&lt;/code&gt;というコマンドを使用する&lt;/p&gt;
-
-&lt;p&gt;音量を上げる場合(下げる場合は+ではなく-)
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amixer -q -D pulse sset Master 10%+&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;音量をミュートする(ミュートを解除する場合はunmute)
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amixer -q -D pulse sset Master mute&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Thinkpad" /><summary type="html">最近一昔前のThinkPadを引っ張りだしArchLinux+WayLand+Swayという環境でインターネッツをしているが音量キーがあるにもかかわらず押しても反応しないため設定をしてみる</summary></entry></feed>
+&lt;p&gt;終了する場合は&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+a&lt;/code&gt;おしてから&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt;その後メッセージが出るので接続を切っていい場合は&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;を入力&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">はじめに</summary></entry></feed>

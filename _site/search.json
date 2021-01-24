@@ -1,10 +1,10 @@
 [
   
     {
-      "title"    : "ノートパソコンについている音量キーをLinuxで扱う",
+      "title"    : "Linuxでコンソールケーブルを使う",
       "category" : "",
       "tags"     : "",
-      "url"      : "/linux/thinkpad/2020/11/01/thinkpad-media-key.html",
+      "url"      : "/linux/2020/11/01/linux-console-cable.html",
       "date"     : "2020-11-01 21:42:24 +0900"
     } ,
   
@@ -12,7 +12,7 @@
       "title"    : "RubyやGemをLinuxにインストールする",
       "category" : "",
       "tags"     : "",
-      "url"      : "/linux/2020/11/01/linux-to-install-ruby.html",
+      "url"      : "/linux/2020/11/01/linux-to-install-ruby-copy.html",
       "date"     : "2020-11-01 21:42:24 +0900"
     } 
   
