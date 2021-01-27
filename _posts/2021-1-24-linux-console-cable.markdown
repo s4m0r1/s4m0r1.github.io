@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Linuxでコンソールケーブルを使う"
-date:   2020-11-01 21:42:24 +0900
+date:   2021-1-26 21:00:00 +0900
 categories: Linux
 ---
 
